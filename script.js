@@ -30,30 +30,43 @@ carrinho.pop()
 carrinho.shift
 //console.log(carrinho)
 
-//----------------------------------Métodos mais complexos ------------------------------
+//  --------------- Métodos mais complexos ---------------
 
-// splice é um dos metodos mais complexos
+// Splice é um dos métodos mais complexos. Com ele podemos remover, adicionar ou substituir elementos do array
 
 // Parâmetros
-// inicio: indice que indica onde a ação vai começar
-//quantidaParaRemover
+// Início: Indice que indica onde a ação vai começar
+// quantidadeParaRemover
+// Pra adicionar utilizo o 0 (Não quero remover)
 
-//posiçãop
-//indice
+//   posição          1       2         3
+//   indice           0       1         2
 let carrinhoPlus = ["caqui", "manga", "goiaba"]
-//console.log(carrinhoPlus[1])
+// console.log(carrinhoPlus[1])
 
+// ---------- Adicionar com Splice
 carrinhoPlus.splice(1, 0, "morango")
-console.log(carrinhoPlus)
-// 
-// imprimiu: ["caqui", "morango", "manga", "goiaba"]
+// console.log(carrinhoPlus)
+//               0         1         2        3
+// imprimiu: ['caqui', 'morango', 'manga', 'goiaba']
 
-carrinhoPlus.splice(4,0, "mamão")
-console.log(carrinhoPlus)
+carrinhoPlus.splice(4, 0, "mamão") // Pra adicionar o segundo valor será sempre 0
+// console.log(carrinhoPlus)
+//               0         1         2         3        4
+// imprimiu: ['caqui', 'morango', 'manga', 'goiaba', 'mamão']
 
-//-------- Remover com Splice
-// carrinhoPlus.splice(Indice que indica onde começa , quantos elementos remover)
-carrinhoPlus.splice(1, 2) // Na posição 0 remove 1 item
-//console.log(carrinhoPlus)
-// imprimiu: ["caqui", "goiaba", 'mamão']
-//removeu o morango e manga
+// ------- Remover com Splice
+// carrinhoPlus.splice( indiceQueIndicaOndeComeça  ,  quantosElementosRemover )
+carrinhoPlus.splice(1, 2) // Na posição 0 remova 2 itens
+// console.log(carrinhoPlus)
+// imprimiu: ['caqui', 'goiaba', 'mamão'] 
+// Removeu o morango e manga
+
+// --------- Substituir com Splice
+let fastFoods = ["pizza", "Hamburguer", "batata frita", "bacon", "cheddar", "pão de queijo"]
+fastFoods.splice(4, 1, "Hot Dog")
+console.log(fastFoods)
+// imprimiu: ['pizza', 'Hamburguer', 'batata frita', 'bacon', 'Hot Dog', 'pão de queijo']
+
+fastFoods.splice(2, 1, "Batata Recheada")
+console.log(fastFoods)
